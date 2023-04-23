@@ -1,27 +1,52 @@
-@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@layer components {
+    .borders{
+        @apply border-solid border-4 border-black;
+    }
+    .headerButton{
+        @apply font-bold text-base bg-[#008ad8] text-white p-2 border-0;
+    }
+
+    .DDOption{
+        @apply flex justify-center items-center w-full h-[45px] bg-white hover:bg-[#008ad8] hover:text-white hover:font-bold;
+    }
+    .TypeofData{
+        @apply grid place-items-center h-full font-bold text-2xl ;
+    }
+    .ARCOAction{
+        @apply flex justify-center items-center h-full font-bold text-2xl bg-[#008ad8] text-white;
+    }
+    .simpleData{
+        @apply grid place-items-center h-full font-normal text-base ;
+    }
+
+    .options{
+        @apply grid place-items-center;
+    }
+    .Form{
+        @apply flex flex-col w-[80%] p-16 bg-white borders gap-12 ;
+    }
+    .actionButton{
+        @apply max-w-[200px] bg-[#48cd00] borders font-bold text-white text-lg p-2 self-end ;
+    }
+    .inputAction{
+        @apply w-full text-lg borders p-4;
+    }
+
+    .infoSection{
+        @apply flex w-full justify-between gap-8;
+    }
+
+    .check{
+        @apply w-[30px] h-[30px] outline outline-black outline-4 border-0 focus:ring-[#008ad8] appearance-none checked:bg-[#008ad8] cursor-pointer;
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+    font-family: 'Arimo', sans-serif;
 }
